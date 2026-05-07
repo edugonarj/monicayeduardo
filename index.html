@@ -3,7 +3,7 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Mónica y Eduardo - 14 Noviembre 2026</title>
+ <title>Mónica & Eduardo - 14 Noviembre 2026</title>
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
  <style>
    *{margin:0;padding:0;box-sizing:border-box}
@@ -22,13 +22,6 @@
    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,8vw,6rem);font-weight:400;line-height:1.1}
    .hero h1 em{font-style:italic;color:var(--gold)}
    .divider{width:60px;height:1px;background:var(--gold);margin:2rem auto}
-
-   /* COUNTDOWN */
-   .countdown-section{padding:4rem 2rem;text-align:center;background:var(--negro);color:var(--beige)}
-   .countdown{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:2rem}
-   .countdown div{min-width:80px}
-   .countdown span{display:block;font-family:'Playfair Display',serif;font-size:3rem}
-   .countdown small{font-size:.75rem;letter-spacing:2px;text-transform:uppercase}
 
    /* SECTIONS */
    section{padding:5rem 2rem;max-width:900px;margin:0 auto}
@@ -83,7 +76,6 @@
      nav ul{gap:.8rem;padding:.8rem .5rem}
      nav a{font-size:.65rem;letter-spacing:1px}
      .lugares,.bus-cards,.contacto-cards{grid-template-columns:1fr}
-     .countdown span{font-size:2rem}
    }
  </style>
 </head>
@@ -103,20 +95,9 @@
 <!-- HERO -->
 <section class="hero" id="inicio">
  <p class="hero-date">14 · Noviembre · 2026</p>
- <h1>Mónica <em>y</em> Eduardo</h1>
+ <h1>Mónica <em>&</em> Eduardo</h1>
  <div class="divider"></div>
 </section>
-
-<!-- COUNTDOWN -->
-<div class="countdown-section">
- <p style="letter-spacing:3px;text-transform:uppercase;font-size:.8rem">Cuenta atrás</p>
- <div class="countdown" id="countdown">
-   <div><span id="days">0</span><small>Días</small></div>
-   <div><span id="hours">0</span><small>Horas</small></div>
-   <div><span id="minutes">0</span><small>Minutos</small></div>
-   <div><span id="seconds">0</span><small>Segundos</small></div>
- </div>
-</div>
 
 <!-- SECCIÓN 1: CEREMONIA Y CELEBRACIÓN -->
 <section id="lugar">
@@ -178,7 +159,7 @@
  <div class="divider"></div>
  <br>
  <p>Mil gracias por acompañarnos en un día tan especial y ayudarnos en el inicio de nuestra nueva etapa!</p>
- <div class="iban" id="iban" title="Click para copiar">ES7415830001169188857537</div>
+ <div class="iban" id="iban" title="Click para copiar">ES74 1583 0001 1691 8885 7537</div>
  <p class="copy-msg" id="copy-msg">¡Copiado! 📋</p>
 </section>
 
@@ -200,23 +181,12 @@
 
 <!-- FOOTER -->
 <footer>
- <p class="names">Mónica y Eduardo</p>
+ <p class="names">M & E</p>
  <div class="divider"></div>
  <p>14 de noviembre de 2026 · Madrid</p>
 </footer>
 
 <script>
-// Countdown
-const wedding = new Date('2026-11-14T12:30:00').getTime();
-setInterval(() => {
- const d = wedding - Date.now();
- if (d < 0) return;
- document.getElementById('days').textContent = Math.floor(d / 864e5);
- document.getElementById('hours').textContent = Math.floor((d % 864e5) / 36e5);
- document.getElementById('minutes').textContent = Math.floor((d % 36e5) / 6e4);
- document.getElementById('seconds').textContent = Math.floor((d % 6e4) / 1e3);
-}, 1000);
-
 // Copy IBAN
 document.getElementById('iban').addEventListener('click', function() {
  var iban = this.textContent.trim();
